@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"person\": {\r\n       \"name\": \"carlos\",\r\n       \"lastName\":\"castro\",\r\n       \"address\":\"cra\",\r\n       \"cellphone\":\"1244\",\r\n       \"cityName\":\"Envigado\"\r\n    },\r\n     \"position\": {\r\n     \"name\":\"qa\"\r\n    },\r\n    \"salary\":\"1000\"\r\n}",
+					"raw": "{\r\n    \"person\": {\r\n       \"name\": \"carlos\",\r\n       \"lastName\":\"castro\",\r\n       \"address\":\"cra\",\r\n       \"cellphone\":\"1244\",\r\n       \"cityName\":\"Envigado\"\r\n    },\r\n     \"position\": {\r\n      \"idPosition\":\"1\"\r\n      },\r\n    \"salary\":\"1000\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

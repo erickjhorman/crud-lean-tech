@@ -5,7 +5,6 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
 @Builder
 @AllArgsConstructor
 public class EmployeeResponse {
@@ -14,9 +13,12 @@ public class EmployeeResponse {
     private PositionDto position;
     private Integer salary;
 
-    public EmployeeResponse(Long id, PositionDto position, Integer salary) {
+    public EmployeeResponse() {
+    }
+
+    public EmployeeResponse(Long id, PersonDto person, Integer salary) {
         this.id = id;
-        this.position = position;
+        this.person = person;
         this.salary = salary;
     }
 }

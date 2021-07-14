@@ -1,8 +1,6 @@
 package com.crudleantech.app.util;
 
 import com.crudleantech.app.domain.Employee;
-import com.crudleantech.app.domain.Person;
-import com.crudleantech.app.domain.Position;
 import com.crudleantech.app.dto.EmployeeRequest;
 import com.crudleantech.app.dto.EmployeeResponse;
 import com.crudleantech.app.dto.PersonDto;

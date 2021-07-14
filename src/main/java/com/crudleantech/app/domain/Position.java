@@ -24,12 +24,8 @@ public class Position implements Serializable {
     private Long idPosition;
     private String name;
 
-
     @OneToMany(mappedBy = "position", fetch = FetchType.LAZY)
     private List<Employee> employees;
-
-
-
     private String nameToLowerCase(String name) {
         return name.toLowerCase();
     }

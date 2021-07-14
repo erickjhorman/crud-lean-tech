@@ -23,7 +23,7 @@ public class Employee implements Serializable {
     private Person person;
 
     @JoinColumn(referencedColumnName = "id_position")
-    @ManyToOne(cascade = {CascadeType.ALL})
+    @ManyToOne()
     private Position position;
 
     private Integer salary;
