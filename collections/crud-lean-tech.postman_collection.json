@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "f24cd658-5e51-4a8b-8661-5a754b83b706",
+		"name": "crud-lean-tech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"person\": {\r\n       \"name\": \"carlos\",\r\n       \"lastName\":\"castro\",\r\n       \"address\":\"cra\",\r\n       \"cellphone\":\"1244\",\r\n       \"cityName\":\"Envigado\"\r\n    },\r\n     \"position\": {\r\n     \"name\":\"qa\"\r\n    },\r\n    \"salary\":\"1000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"id\":\"1\",\r\n    \"person\": {\r\n       \"name\": \"Erick\",\r\n       \"lastName\":\"De lo angeles \",\r\n       \"address\":\"cra 89 n° 23-25\",\r\n       \"cellphone\":\"4554545\",\r\n       \"cityName\":\"Montebello\"\r\n     },\r\n    \"position\": {\r\n        \"name\":\"qa\"\r\n    },\r\n     \"salary\":\"3000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get employees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterByNameOrPosition",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees/name/position?nameParam=pedro&positionParam=qa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"name",
+						"position"
+					],
+					"query": [
+						{
+							"key": "nameParam",
+							"value": "pedro"
+						},
+						{
+							"key": "positionParam",
+							"value": "qa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterByNameOrPositionEmptyParams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees/name/position?nameParam=&positionParam=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"name",
+						"position"
+					],
+					"query": [
+						{
+							"key": "nameParam",
+							"value": ""
+						},
+						{
+							"key": "positionParam",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get positions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/employees/positions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"positions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
